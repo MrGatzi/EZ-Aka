@@ -198,3 +198,8 @@ footer p {
 }
 
 /* my stuff for carousel etc. */
+.cert,
+.gemeinwohl{
+  display: inline;
+  margin-left: 25%; /* positioning in de middle*/
+}
