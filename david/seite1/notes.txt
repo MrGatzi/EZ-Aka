@@ -1,0 +1,7 @@
+verbesserung:
+
+separate google maps karte --> besser erkennbar
+
+schritte --> wie funktioniert's eigener reiter?
+
+footer --> weis vlt a bissal andere farbe oder ned so fett.
