@@ -203,4 +203,9 @@ footer p {
 .gemeinwohl{
   display: inline;
   margin-left: 25%; /* positioning in de middle*/
+  padding-top: 10px;
+}
+
+.services-text{
+  text-align: center;
 }

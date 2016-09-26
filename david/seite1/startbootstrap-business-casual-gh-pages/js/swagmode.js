@@ -11,17 +11,27 @@ function swagmodeon(){
     $('.about').hide("slow");
     $('.contact').hide("slow");
     $('.home').show("slow");
+    $('.services').hide("slow");
   });
 
   $('.aboutbutton').click(function(){
     $('.about').show("slow");
     $('.contact').hide("slow");
     $('.home').hide("slow");
+    $('.services').hide("slow");
   });
 
   $('.contactbutton').click(function(){
     $('.about').hide("slow");
     $('.contact').show("slow");
     $('.home').hide("slow");
+    $('.services').hide("slow");
+  });
+
+  $('.servicesbutton').click(function(){
+    $('.about').hide("slow");
+    $('.contact').hide("slow");
+    $('.home').hide("slow");
+    $('.services').show("slow");
   });
 }
