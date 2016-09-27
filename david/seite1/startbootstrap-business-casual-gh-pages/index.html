@@ -34,7 +34,7 @@
 
 <body>
 
-    <div class="brand"> <img class="img-responsive logo" src="img/logo.png" alt="logo"></img> EZ - Akademie </div>
+    <div class="brand homebutton"><img class="img-responsive logo" src="img/logo.png" alt="logo"></img> EZ - Akademie </div>
     <div class="address-bar">VITALE  Menschen  •  Unternehmen  •  Gemeinden</div>
 
     <!-- Navigation -->
@@ -62,6 +62,9 @@
                     </li>
                     <li>
                         <a class="servicesbutton">VITALE Angebote</a>
+                    </li>
+                    <li>
+                        <a class="howtobutton">so werden Sie VITAL</a>
                     </li>
                     <li>
                         <a class="contactbutton">Kontakt</a>
@@ -185,19 +188,19 @@
                     <hr>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <img class="img-responsive" src="https://unsplash.it/750/450/?random" alt="">
+                    <img class="img-responsive img-circle" src="https://unsplash.it/400/400/?random" alt="">
                     <h3>Max Mustermann <br>
                         <small>Web Designer</small>
                     </h3>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <img class="img-responsive" src="https://unsplash.it/750/450?blur" alt="">
+                    <img class="img-responsive img-circle" src="https://unsplash.it/400/400?blur" alt="">
                     <h3>Maxime Mustermann <br>
                         <small>Front-End Developer</small>
                     </h3>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <img class="img-responsive" src="https://unsplash.it/750/450" alt="">
+                    <img class="img-responsive img-circle" src="https://unsplash.it/400/400" alt="">
                     <h3>Hubert Mustermann <br>
                         <small>UX Designer</small>
                     </h3>
@@ -283,6 +286,109 @@
         </div>
     </div>
     <!-- /.container services -->
+
+    <!-- HOWTO SECTION -->
+    <div class="container howto">
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">So
+                        <strong>werden Sie VITAL</strong>
+                    </h2>
+                    <hr>
+                </div>
+
+            			<div class="container">
+            				<div class="row">
+            					<div class="col-lg-12 text-center">
+            						<h2 class="intro-text">Und so funktioniert es:</h2>
+            					</div>
+            				</div>
+            				<div class="row">
+            					<div class="col-lg-12">
+            						<ul class="timeline">
+            							<li>
+            								<div class="timeline-image">
+            									<img class="img-circle img-responsive" src="https://unsplash.it/200/200" alt="">
+            								</div>
+            								<div class="timeline-panel">
+            									<div class="timeline-heading">
+            										<h4>Schritt 1</h4>
+            										<h4 class="subheading">Kurzbeschreibung</h4>
+            									</div>
+            									<div class="timeline-body">
+            										<p class="text-muted">Längerer Text bei Bedarf.</p>
+            									</div>
+            								</div>
+            							</li>
+            							<li class="timeline-inverted">
+            								<div class="timeline-image">
+            									<img class="img-circle img-responsive" src="https://unsplash.it/200/200" alt="">
+            								</div>
+            								<div class="timeline-panel">
+            									<div class="timeline-heading">
+            										<h4>Schritt 2</h4>
+            										<h4 class="subheading">Kurzbeschreibung</h4>
+            									</div>
+            									<div class="timeline-body">
+            										<p class="text-muted">Längerer Text bei Bedarf.</p>
+            									</div>
+            								</div>
+            							</li>
+            							<li>
+            								<div class="timeline-image">
+            									<img class="img-circle img-responsive" src="https://unsplash.it/200/200" alt="">
+            								</div>
+            								<div class="timeline-panel">
+            									<div class="timeline-heading">
+            										<h4>Schritt 3</h4>
+            										<h4 class="subheading">Kurzbeschreibung</h4>
+            									</div>
+            									<div class="timeline-body">
+            										<p class="text-muted">Längerer Text bei Bedarf.</p>
+            									</div>
+            								</div>
+            							</li>
+            							<li class="timeline-inverted">
+            								<div class="timeline-image">
+            									<img class="img-circle img-responsive" src="https://unsplash.it/200/200" alt="">
+            								</div>
+            								<div class="timeline-panel">
+            									<div class="timeline-heading">
+            										<h4>Schritt 4</h4>
+            										<h4 class="subheading">Kurzbeschreibung</h4>
+            									</div>
+            									<div class="timeline-body">
+                                <p class="text-muted">Längerer Text bei Bedarf.</p>
+            									</div>
+            								</div>
+            							</li>
+            							<li>
+            								<div class="timeline-image">
+            									<img class="img-circle img-responsive" src="https://unsplash.it/200/200" alt="">
+            								</div>
+            								<div class="timeline-panel">
+            									<div class="timeline-heading">
+            										<h4>Schritt 5</h4>
+            										<h4 class="subheading">Kurzbeschreibung</h4>
+                                <div class="timeline-body">
+                                  <p class="text-muted">Längerer Text bei Bedarf.</p>
+              									</div>
+            									</div>
+            								</div>
+            							</li>
+            						</ul>
+            					</div>
+            				</div>
+            			</div>
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container howto -->
 
     <!-- CONTACT SECTION -->
     <div class="container contact">
@@ -391,6 +497,7 @@
     $('.contact').hide("slow");
     $('.home').show("slow");
     $('.services').hide("slow");
+    $('.howto').hide("slow");
 
     swagmodeon();
 

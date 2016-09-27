@@ -12,6 +12,7 @@ function swagmodeon(){
     $('.contact').hide("slow");
     $('.home').show("slow");
     $('.services').hide("slow");
+    $('.hoeto').hide("slow");
   });
 
   $('.aboutbutton').click(function(){
@@ -19,6 +20,7 @@ function swagmodeon(){
     $('.contact').hide("slow");
     $('.home').hide("slow");
     $('.services').hide("slow");
+    $('.hoeto').hide("slow");
   });
 
   $('.contactbutton').click(function(){
@@ -26,6 +28,7 @@ function swagmodeon(){
     $('.contact').show("slow");
     $('.home').hide("slow");
     $('.services').hide("slow");
+    $('.hoeto').hide("slow");
   });
 
   $('.servicesbutton').click(function(){
@@ -33,5 +36,14 @@ function swagmodeon(){
     $('.contact').hide("slow");
     $('.home').hide("slow");
     $('.services').show("slow");
+    $('.hoeto').hide("slow");
+  });
+
+  $('.howtobutton').click(function(){
+    $('.about').hide("slow");
+    $('.contact').hide("slow");
+    $('.home').hide("slow");
+    $('.services').hide("slow");
+    $('.howto').show("slow");
   });
 }
