@@ -12,7 +12,7 @@ function swagmodeon(){
     $('.contact').hide("slow");
     $('.home').show("slow");
     $('.services').hide("slow");
-    $('.hoeto').hide("slow");
+    $('.howto').hide("slow");
   });
 
   $('.aboutbutton').click(function(){
