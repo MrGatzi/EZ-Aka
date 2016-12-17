@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
-
-    <?php Loader::element('header_required') ?>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>EZ - Akademie</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="<?= $view->getThemePath() ?>/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="<?= $view->getThemePath() ?>/css/ezaka.css" rel="stylesheet">
+    <link href="css/ezaka.css" rel="stylesheet">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
@@ -32,9 +30,7 @@
 
 <body>
 
-    <div class="<?= $c->getPageWrapperClass() ?>">
-
-    <div class="brand homebutton"><img class="img-responsive logo" src="<?= $view->getThemePath() ?>/img/logo.png" alt="logo"></img> EZ - Akademie </div>
+    <div class="brand homebutton"><img class="img-responsive logo" src="img/logo.png" alt="logo"></img> EZ - Akademie </div>
     <div class="address-bar">VITALE  Menschen  •  Unternehmen  •  Gemeinden</div>
 
     <!-- Navigation -->
@@ -49,7 +45,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                <a class="navbar-brand" href="<?= $view->getThemePath() ?>/full.php">EZ - Akademie</a>
+                <a class="navbar-brand" href="#">EZ - Akademie</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -61,14 +57,18 @@
                         <a class="aboutbutton">Über uns</a>
                     </li>
                     <li>
-                        <a class="servicesbutton">VITALE Angebote</a>
+                        <a class="howtobutton">VitalitätsAnalyse</a>
                     </li>
                     <li>
-                        <a class="howtobutton">so werden Sie VITAL</a>
+                        <a class="servicesbutton">Vitale Angebote</a>
                     </li>
                     <li>
-                        <a class="contactbutton">Kontakt</a>
+                        <a class="bestbutton">Best Practice</a>
                     </li>
+                    <!--
+                    <li>
+                        <a class="contactbutton">Kontakt/Impressum</a>
+                    </li>-->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -93,13 +93,13 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img class="img-responsive img-full" src="<?= $view->getThemePath() ?>/img/slider1.jpg" alt="">
+                                <img class="img-responsive img-full" src="img/slider1.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img class="img-responsive img-full" src="<?= $view->getThemePath() ?>/img/slider2.jpg" alt="">
+                                <img class="img-responsive img-full" src="img/slider2.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img class="img-responsive img-full" src="<?= $view->getThemePath() ?>/img/slider3.jpg" alt="">
+                                <img class="img-responsive img-full" src="img/slider3.jpg" alt="">
                             </div>
                         </div>
 
@@ -112,13 +112,13 @@
                         </a>
                     </div>
                     <h2 class="brand-before">
-                        <small>Herzlich Wilkommen bei der</small>
+                        <small>Herzlich Wilkommen in der</small>
                     </h2>
                     <h1 class="brand-name">EZ - Akademie</h1>
                     <hr class="tagline-divider">
                     <h2>
                         <small>
-                            <strong>Eglseer und Zellermayr</strong>
+                            <strong>Eglseer und Zellermayer</strong>
                         </small>
                     </h2>
                 </div>
@@ -127,28 +127,156 @@
 
         <div class="row">
             <div class="box">
-                <div class="col-lg-12">
+                <div class="col-lg-12" style="min-height:400px;">
                     <hr>
-                    <h2 class="intro-text text-center">lorem ipsum
-                        <strong>dolor sit amet</strong>
+                    <h2 class="intro-text text-center">
+                        <strong>VitalitaetsVideo</strong>
                     </h2>
                     <hr>
-                    <img class="img-responsive img-border img-left" src="https://unsplash.it/250/150" alt="">
                     <hr class="visible-xs">
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus.</p>
+                    <p>
+                      Kurze Inspirationen für mehr Vitalitaet
+                    </p>
+                    <br>
+                    <p>
+                      Video ansehen und ein <strong>GRATIS VitalitaetsCoaching</strong> der EZ-Akademie gewinnen!
+                    </p>
+                    <br>
+                    <div class='embed-container'>
+                      <div id="player"></div>
+
+                      <script>
+                        // 2. This code loads the IFrame Player API code asynchronously.
+                        var tag = document.createElement('script');
+
+                        tag.src = "https://www.youtube.com/iframe_api";
+                        var firstScriptTag = document.getElementsByTagName('script')[0];
+                        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                        // 3. This function creates an <iframe> (and YouTube player)
+                        //    after the API code downloads.
+                        var player;
+                        function onYouTubeIframeAPIReady() {
+                          player = new YT.Player('player', {
+                            height: '360',
+                            width: '640',
+                            videoId: 'T45V9LF7WHg',
+                            playerVars: { 'autoplay': 1, 'controls': 0 },
+                            events: {
+                              'onReady': onPlayerReady,
+                              'onStateChange': onPlayerStateChange
+                            }
+                          });
+                        }
+
+                        // 4. The API will call this function when the video player is ready.
+                        function onPlayerReady(event) {
+                          event.target.playVideo();
+                        }
+
+                        // 5. The API calls this function when the player's state changes.
+                        //    The function indicates that when playing a video (state=1),
+                        //    the player should play for six seconds and then stop.
+                        var done = false;
+                        function onPlayerStateChange(event) {
+                          if (event.data == YT.PlayerState.ENDED && !done) {
+                            $('#gewinnspiel').modal('show');
+                            done = true;
+                          }
+                        }
+                      </script>
+                    </div>
                 </div>
             </div>
         </div>
+        <!--/Block-->
+
+        <!-- Modal for video -->
+        <!-- Modal -->
+        <div class="modal fade" id="gewinnspiel" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"></h4>
+              </div>
+              <div class="modal-body">
+                <p>Some text in the modal.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Block-->
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">
+                        <strong>Vitalität ist menschlich!</strong>
+                    </h2>
+                    <hr>
+                    <hr class="visible-xs">
+                    <p>
+                      <strong>
+                        Dann stellen sich Erfolg und Lebensfreude von selber ein,
+                        trotz der hohen Anforderungen im heutigen Berufs- und Privatleben.
+                        Das gilt für jeden Menschen individuell ebenso wie im Betrieblichen
+                        Gesundheitsmanagement und in der Gemeinwohlökonomie.
+                        Wo es an Vitalität mangelt, geht wertvolles Potential verloren.
+                      </strong>
+                      <br>
+                      <br>
+                      Deshalb verbinden wir Gesundheit,
+                      Werte, Wissenschaft und Wirtschaftlichkeit,
+                      um genau dieses Potential zu wecken: in Ihrer Person,
+                      in Ihrem Unternehmen, in Ihrer Gemeinde. Das tun wir mit evidenzbasierten,
+                      maßgeschneiderten Coachings, Lehr- und Bildungsangeboten.
+                      Und genau das zeichnet uns aus.
+                    </p>
+                    <br>
+                    <br>
+                    <img class="img-responsive img-border img-left" src="img/left.jpg" alt="">
+                    <p>
+                      Wir, das sind <a class="aboutbutton">Rosa Maria Eglseer, MSc</a>, und <a class="aboutbutton">Mag. Peter Zellermayer</a>
+                      sowie unser ebenso vitalitäts- und erfolgsorientiertes <a class="aboutbutton">ExpertInnenteam</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--/Block-->
 
         <div class="row">
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">lorem ipsum
-                        <strong>dolor amet</strong>
+                    <h2 class="intro-text text-center">
+                      <strong>
+                        Dazu stehen wir!
+                      </strong>
                     </h2>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    <p>
+                      Jeder Mensch ist eine einzigartige Source, Quelle, und nicht: Ressource.
+                      Ebenso ist jeder Mensch Experte für sein eigenes Leben.
+                      Das zu achten und zu respektieren ist Voraussetzung für eine freudvolle
+                      und zielorientierte Zusammenarbeit.
+                      <br>
+                      <br>
+                      Daraus ergibt sich: wir hören zu, wir sind Profis im Analysieren, wir entwickeln Lösungen gemeinsam. Und wir feiern unsere Erfolge mit Ihnen gemeinsam!
+                      Auf zu mehr Vitalität!
+                      <br>
+                      <br>
+                      <p class="text-center">
+                        Informieren Sie sich unverbindlich:
+                        <a href="tel:+436767786511">+43(0) 6767786511</a>
+                        <br>
+                        <a href="mailto:info@ez-akademie.at">info@ez-akademie.at</a>
+                      </p>
+                    </p>
                 </div>
             </div>
         </div>
@@ -163,17 +291,222 @@
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">Was
-                        <strong>wir machen</strong>
+                    <h2 class="intro-text text-center">
+                        <strong>Was wir machen</strong>
                     </h2>
                     <hr>
                 </div>
                 <div class="col-md-6">
-                    <img class="img-responsive img-border-left" src="https://unsplash.it/750/450" alt="">
+                  <img class="img-responsive img-border machen-img" src="img/machen.jpg" alt="">
                 </div>
                 <div class="col-md-6">
-                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                  <p>
+                    EZ-Akademie – VITALE Menschen • Unternehmen • Gemeinden
+                    ist ein Projekt von Rosa Maria Eglseer und Peter Zellermayer.
+                    Wir woll(t)en „nicht nur privat“ Partner sein,
+                    sondern auch unsere beruflichen Kompetenzen bündeln und haben im November 2011
+                     gemeinsam die Marke „Eglseer & Zellermayer“ entwickelt und im September 2013 den Verein
+                     „ EZ-Akademie – VITALE Menschen • Unternehmen • Gemeinden “ gegründet.
+                  </p>
+                  <br>
+                  <p>
+                    Unser Thema ist die <strong>VITALITÄT</strong>.
+                    Die Vitalität eines Menschen ist grundlegender und weitreichender als seine Gesundheit,
+                    weil sie körperliche, mentale, emotionale und soziale Faktoren umfasst. Potential für mehr
+                    Lebensenergie und Lebensfreude ist in jedem Menschen vorhanden.
+                    Das zu wecken und zu erhalten - daran arbeiten wir.
+                    Wenn Sie möchten, auch mit Ihnen!
+                  </p>
                 </div>
+                <br>
+                <div class="col-md-6">
+                  <br>
+                  <p>
+                    Daraus ergibt sich unser zweites Thema: <strong>BETRIEBLICHES GESUNDHEITSMANAGEMENT.</strong>
+                    Vitale Menschen in vitalen Unternehmen.
+                    Ihr Unternehmen ist nicht zwangsläufig krank, wenn die „Lust statt Frust“ –
+                    Tage immer weniger werden oder die Krankenstandstage immer mehr.
+                    Aber da steckt noch viel mehr drinnen: Ihr Unternehmen braucht Vitalität!
+                  </p>
+                  <br>
+                  <p>
+                    Last but not least: <strong>GEMEINWOHL</strong>. Ein ethisches Modell.
+                    Unserer Überzeugung nach das einzig zukunftsfähige,
+                    weil das Wohl von Mensch und Umwelt zum obersten Ziel des Wirtschaftens und Zusammenlebens wird.
+                    Menschen müssen wieder spüren, dass jedes Mitglied ihrer Kommune  mit seinen besonderen Erfahrungen,
+                    seinem Wissen und seinen Fähigkeiten dazugehört und gebraucht wird, um dieses Zusammenleben zu gestalten.
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <img class="img-responsive img-border machen-img" src="img/machen2.jpg" alt="">
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+
+        <!--Team-->
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">
+                        <strong>DAS TEAM</strong>
+                    </h2>
+                    <hr>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img class="img-responsive img-circle centerimg" src="https://placehold.it/400x400" alt="">
+                    <h3 class="">Rosa Maria Eglseer, MSc<br>
+                        <small>Geschäftsführung</small>
+                    </h3>
+                    <br>
+                      <ul class="team-text">
+                        <li>Gesundheitsmanagerin MSc,</li>
+                        <li>Unternehmens-, Lebens- & Sozialberaterin</li>
+                        <li>Dipl. Gesundheits- & Krankenschwester; Pflegedirektorin</li>
+                        <li>Projektleiterin für betriebliche Gesundheitsförderung</li>
+                        <li>Zertifizierter Innermetrixcoach CIC</li>
+                        <li>Beraterin zur Erstellung der Gemeinwohlbilanz</li>
+                      </ul>
+                    <p class="">
+                      Tel.:  <a href="tel:+436767786511">+43(0) 676 7786511</a> <br>
+                      <a href="mailto:rme@ez-akademie.at">rme@ez-akademie.at</a>
+                    </p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img class="img-responsive img-circle centerimg" src="https://placehold.it/400x400" alt="">
+                    <h3 class="">Mag. Peter Zellermayer<br>
+                        <small>Geschäftsführung</small>
+                    </h3>
+                    <br>
+                    <ul class="team-text">
+                      <li>Geschäftsführer IROS Unternehmensberatungs GesmbH</li>
+                      <li>Betriebswirt, Unternehmensberater, Unternehmer</li>
+                      <li>Unternehmens-, Lebens- & Sozialberater</li>
+                      <li>zertifizierter HRV-Coach, Verhaltens- und Vitalitäts Trainer</li>
+                    </ul>
+                    <p class="">
+                      Tel.:  <a href="tel:+436648406659">+43(0) 664 8406659</a> <br>
+                      <a href="mailto:pz@ez-akademie.at">pz@ez-akademie.at</a>
+                    </p>
+
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="col-lg-12 samllfont">
+                    <hr>
+                    <h2 class="intro-text text-center">Unsere vitalen ExpertInnen
+                    </h2>
+                    <hr>
+                </div>
+
+
+                <div class="col-md-3 text-center">
+                    <img class="img-responsive img-circle centerimg" src="https://placehold.it/250x250" alt="">
+                    <h3>Maria Feytl <br>
+                        <small>Schwerpunkt Migräne</small>
+                    </h3>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img class="img-responsive img-circle centerimg" src="https://placehold.it/250x250" alt="">
+                    <h3>MMag. Dr. Aron Kampusch <br>
+                        <small>Schwerpunkt Kommunikation</small>
+                    </h3>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img class="img-responsive img-circle centerimg" src="https://placehold.it/250x250" alt="">
+                    <h3>Mag. Andrea Kanicki <br>
+                        <small>Schwerpunkt Kunsttherapie</small>
+                    </h3>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img class="img-responsive img-circle centerimg" src="https://placehold.it/250x250" alt="">
+                    <h3>Mag. Andrea Koppensteiner <br>
+                        <small>Schwerpunkt Intuitives Coaching</small>
+                    </h3>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img class="img-responsive img-circle centerimg" src="https://placehold.it/250x250" alt="">
+                    <h3> D.I. Ulrich Schneider<br>
+                        <small>Schwerpunkt Intuitives Coaching</small>
+                    </h3>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img class="img-responsive img-circle centerimg" src="https://placehold.it/250x250" alt="">
+                    <h3>MMag. Julia Wachter <br>
+                        <small>Schwerpunkt Sucht</small>
+                    </h3>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img class="img-responsive img-circle centerimg" src="https://placehold.it/250x250" alt="">
+                    <h3>Walter Eglseer, MBA <br>
+                        <small>Partner: Schwerpunkt Unternehmens- und Führungskräfteentwicklung</small>
+                    </h3>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img class="img-responsive img-circle centerimg" src="https://placehold.it/250x250" alt="">
+                    <h3>Dr. Reinhard Wieltsch <br>
+                        <small>Partner: Schwerpunkt Naturheilmethoden</small>
+                    </h3>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+        <!-- Leitbild und werte -->
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">
+                        <strong>Leitbild und Werte</strong>
+                    </h2>
+                    <hr>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <ul class="leitwerte">
+                  <li><p>
+                    Wir verbinden Gesundheit, Werte, Wissenschaft und Wirtschaftlichkeit.
+                  </p></li>
+                  <br>
+                  <li><p>
+                    Wir sehen im Menschen keine Ressourcen – wir sehen in ihm eine Source –
+                    also die Quellle und fördern seine Talente, Potentiale, Fähigkeiten und Leidenschaften.
+                  </p></li>
+                  <br>
+                  <li><p>
+                    Wir wissen, dass jeder Mensch Experte für sein eigenes Leben ist und
+                    achten deren unterschiedliche Erfahrungen und Wege.
+                  </p></li>
+                  <br>
+                  <li><p>
+                    Unsere Lehrmethoden sollen von Partizipation, guter Beziehung und Vertrauen  getragen sein.
+                  </p></li>
+                  <br>
+                  <li><p>
+                    Wir arbeiten nach dem Empowerment-Konzept und achten darauf, dass
+                    das innerbetriebliche / kommunale Knowhow steigt.
+                  </p></li>
+                  <br>
+                  <li><p>
+                    Wir verstehen uns als Plattform für ReferentInnen und ExpertInnen,
+                    die sich der Grundidee der Gemeinwohlökonomie verschrieben haben.
+                  </p></li>
+                  <br>
+                  <li><p>
+                    Wir wollen mit allen unseren KooperationspartnerInnen gemeinsam wachsen und uns entwickeln.
+                  </p></li>
+                  <br>
+                  <li><p>
+                    Wir wollen mit unseren Kund/innen, KooperationspartnerInnen unsere Erfolge feiern, vertrauensvolle Beziehungen und ein gutes Leben haben.
+                  </p></li>
+                </ul>
+
                 <div class="clearfix"></div>
             </div>
         </div>
@@ -182,29 +515,50 @@
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">DAS
-                        <strong>TEAM</strong>
+                    <h2 class="intro-text text-center">
+                        <strong>Von wem wir lernen</strong>
                     </h2>
                     <hr>
                 </div>
-                <div class="col-sm-4 text-center">
-                    <img class="img-responsive img-circle" src="https://unsplash.it/400/400/?random" alt="">
-                    <h3>Max Mustermann <br>
-                        <small>Web Designer</small>
-                    </h3>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <img class="img-responsive img-circle" src="https://unsplash.it/400/400?blur" alt="">
-                    <h3>Maxime Mustermann <br>
-                        <small>Front-End Developer</small>
-                    </h3>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <img class="img-responsive img-circle" src="https://unsplash.it/400/400" alt="">
-                    <h3>Hubert Mustermann <br>
-                        <small>UX Designer</small>
-                    </h3>
-                </div>
+                <div class="clearfix"></div>
+                <ul class="list-unstyled text-center">
+                  <li>
+                    <p>
+                      <a target="_blank" href="http://www.gerald-huether.de/">Gerald Hüther</a>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a target="_blank" href="http://www.christian-felber.at/">Christian Felber</a>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a target="_blank" href="http://www.soziokratie.at/">Soziokratie</a>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a target="_blank" href="http://www.vermoegenspool.at/">Dr. Markus Distelberger</a>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a target="_blank" href="http://www.karllauterbach.de/person.html">Karl Lauterbach</a>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a target="_blank" href="http://www.do-care.de/anne-katrin-matyssek/">Anne Katrin Matyssek</a>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <a target="_blank" href="http://www.qualy-med.at/kompetenz-und-erfahrung/">Susanna Bultmann-Horn</a>
+                    </p>
+                  </li>
+                </ul>
+
                 <div class="clearfix"></div>
             </div>
         </div>
@@ -219,8 +573,8 @@
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">Was
-                        <strong>wir machen</strong>
+                    <h2 class="intro-text text-center">
+                        <strong>Was wir machen</strong>
                     </h2>
                     <hr>
                 </div>
@@ -228,7 +582,7 @@
                 <div class="row">
                   <div class="col-md-4">
                     <!--<img class="img-responsive img-border-left" src="https://unsplash.it/750/450" alt="">-->
-                    <img class="img-responsive img-circle center-block" src="https://unsplash.it/200/200">
+                    <img class="img-responsive img-circle center-block" src="https://placehold.it/200x200">
                     <p class="services-text">
                       <strong>Service1</strong>
                       <br>
@@ -236,7 +590,7 @@
                     </p>
                   </div>
                   <div class="col-md-4">
-                    <img class="img-responsive img-circle center-block" src="https://unsplash.it/200/200">
+                    <img class="img-responsive img-circle center-block" src="https://placehold.it/200x200">
                     <p class="services-text">
                       <strong>Service2</strong>
                       <br>
@@ -244,7 +598,7 @@
                     </p>
                   </div>
                   <div class="col-md-4">
-                    <img class="img-responsive img-circle center-block" src="https://unsplash.it/200/200">
+                    <img class="img-responsive img-circle center-block" src="https://placehold.it/200x200">
                     <p class="services-text">
                       <strong>Service3</strong>
                       <br>
@@ -256,7 +610,7 @@
                 <div class="row">
                   <div class="col-md-4">
                     <!--<img class="img-responsive img-border-left" src="https://unsplash.it/750/450" alt="">-->
-                    <img class="img-responsive img-circle center-block" src="https://unsplash.it/200/200">
+                    <img class="img-responsive img-circle center-block" src="https://placehold.it/200x200">
                     <p class="services-text">
                       <strong>Service4</strong>
                       <br>
@@ -264,7 +618,7 @@
                     </p>
                   </div>
                   <div class="col-md-4">
-                    <img class="img-responsive img-circle center-block" src="https://unsplash.it/200/200">
+                    <img class="img-responsive img-circle center-block" src="https://placehold.it/200x200">
                     <p class="services-text">
                       <strong>Service5</strong>
                       <br>
@@ -272,7 +626,7 @@
                     </p>
                   </div>
                   <div class="col-md-4">
-                    <img class="img-responsive img-circle center-block" src="https://unsplash.it/200/200">
+                    <img class="img-responsive img-circle center-block" src="https://placehold.it/200x200">
                     <p class="services-text">
                       <strong>Service6</strong>
                       <br>
@@ -311,7 +665,7 @@
             						<ul class="timeline">
             							<li>
             								<div class="timeline-image">
-            									<img class="img-circle img-responsive" src="https://unsplash.it/200/200" alt="">
+            									<img class="img-circle img-responsive" src="https://placehold.it/200x200" alt="">
             								</div>
             								<div class="timeline-panel">
             									<div class="timeline-heading">
@@ -325,7 +679,7 @@
             							</li>
             							<li class="timeline-inverted">
             								<div class="timeline-image">
-            									<img class="img-circle img-responsive" src="https://unsplash.it/200/200" alt="">
+            									<img class="img-circle img-responsive" src="https://placehold.it/200x200" alt="">
             								</div>
             								<div class="timeline-panel">
             									<div class="timeline-heading">
@@ -339,7 +693,7 @@
             							</li>
             							<li>
             								<div class="timeline-image">
-            									<img class="img-circle img-responsive" src="https://unsplash.it/200/200" alt="">
+            									<img class="img-circle img-responsive" src="https://placehold.it/200x200" alt="">
             								</div>
             								<div class="timeline-panel">
             									<div class="timeline-heading">
@@ -353,7 +707,7 @@
             							</li>
             							<li class="timeline-inverted">
             								<div class="timeline-image">
-            									<img class="img-circle img-responsive" src="https://unsplash.it/200/200" alt="">
+            									<img class="img-circle img-responsive" src="https://placehold.it/200x200" alt="">
             								</div>
             								<div class="timeline-panel">
             									<div class="timeline-heading">
@@ -367,7 +721,7 @@
             							</li>
             							<li>
             								<div class="timeline-image">
-            									<img class="img-circle img-responsive" src="https://unsplash.it/200/200" alt="">
+            									<img class="img-circle img-responsive" src="https://placehold.it/200x200" alt="">
             								</div>
             								<div class="timeline-panel">
             									<div class="timeline-heading">
@@ -397,8 +751,8 @@
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">So
-                        <strong>finden Sie uns</strong>
+                    <h2 class="intro-text text-center">
+                        <strong>So finden Sie uns</strong>
                     </h2>
                     <hr>
                 </div>
@@ -426,7 +780,7 @@
                 <div class="col-lg-12">
                     <hr>
                     <h2 class="intro-text text-center">Tritt mit uns in
-                        <strong>Kontakt</strong>
+                        <strong>Tritt mit uns in Kontakt</strong>
                     </h2>
                     <hr>
                     <p>Schreiben Sie uns Ihre Meinungen, Wünsche, Anregungen oder einfach nur eine Frage.</p>
@@ -466,8 +820,8 @@
         <div class="container">
             <div class="row">
               <div class="col-lg-12">
-                <img class="img-responsive gemeinwohl" src="<?= $view->getThemePath() ?>/img/gemeinwohl.png" alt="gemeinwohl" />
-                <img class="img-responsive cert" src="<?= $view->getThemePath() ?>/img/cert.png" alt="cert" />
+                <img class="img-responsive gemeinwohl" src="img/gemeinwohl.png" alt="gemeinwohl" />
+                <img class="img-responsive cert" src="img/cert.png" alt="cert" />
               </div>
               <div class="col-lg-12 text-center">
                 <p>Copyright &copy; EZ-Akademie 2016</p>
@@ -477,16 +831,16 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="<?= $view->getThemePath() ?>/js/jquery.js"></script>
+    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="<?= $view->getThemePath() ?>/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="<?= $view->getThemePath() ?>/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- Swagmode JS -->
-    <script src="<?= $view->getThemePath() ?>/js/swagmode.js"></script>
+    <script src="js/swagmode.js"></script>
 
     <!-- Script to Activate the Carousel and Swagmode -->
     <script>
@@ -506,10 +860,6 @@
     });
 
     </script>
-
-<?php Loader::element('footer_required') ?>
-
-</div>
 
 </body>
 

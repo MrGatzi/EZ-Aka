@@ -7,7 +7,7 @@
 body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     /*background: url('../img/bg7.jpg') no-repeat center center fixed;*/
-    background: url('https://unsplash.it/1920/1080/?blur') no-repeat center center fixed;
+    background: url('../img/bg.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -174,7 +174,7 @@ footer p {
     }
 
     .nav>li>a {
-        padding: 35px;
+        padding: 30px;
     }
 
     .navbar-nav>li>a {
@@ -185,7 +185,7 @@ footer p {
         display: table;
         float: none;
         margin: 0 auto;
-        table-layout: fixed;
+        table-layout:fixed;
         font-size: 1.25em;
     }
 }
@@ -210,6 +210,43 @@ footer p {
   text-align: center;
 }
 
+.machen-img{
+  margin-top: 4%;
+}
+
+.centerimg{
+  margin: 0 auto;
+}
+
+.smallfont{
+  font-size: 40%;
+}
+
+.team-text{
+  text-align: left;
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #000;
+  padding-left: 25%;
+  max-width: 80%;
+}
+
+.team-contact{
+  border: 1px solid #999999;
+  border-radius: 100px;
+  max-width: 50%;
+  margin: auto;
+}
+
+.leitwerte{
+  margin-left: 4%;
+}
+
+.menu-item{
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
 /* Timeline --> How to */
 
 .timeline {
@@ -411,3 +448,22 @@ footer p {
         padding: 0 100px 20px 20px;
     }
 }
+
+/* Video player - responisve code*/
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
