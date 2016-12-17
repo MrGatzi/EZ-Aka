@@ -43,8 +43,6 @@ hr {
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
   display: inline;
 }
 
@@ -467,3 +465,12 @@ footer p {
     width: 100%;
     height: 100%;
   }
+
+.blacklink,
+.blacklink:active,
+.blacklink:hover,
+.blacklink:focus,
+.blacklink:link
+{
+  text-decoration: none;
+}
