@@ -13,7 +13,8 @@ function swagmodeon(){
     $('.home').show("slow");
     $('.services').hide("slow");
     $('.howto').hide("slow");
-	window.scrollTo(0, 0);
+    $('.goodpractice').hide("slow");
+	   window.scrollTo(0, 0);
   });
 
   $('.aboutbutton').click(function(){
@@ -22,7 +23,8 @@ function swagmodeon(){
     $('.home').hide("slow");
     $('.services').hide("slow");
     $('.howto').hide("slow");
-	window.scrollTo(0, 0);
+    $('.goodpractice').hide("slow");
+	   window.scrollTo(0, 0);
   });
 
   $('.contactbutton').click(function(){
@@ -31,7 +33,8 @@ function swagmodeon(){
     $('.home').hide("slow");
     $('.services').hide("slow");
     $('.howto').hide("slow");
-	window.scrollTo(0, 0);
+    $('.goodpractice').hide("slow");
+	   window.scrollTo(0, 0);
   });
 
   $('.servicesbutton').click(function(){
@@ -40,7 +43,8 @@ function swagmodeon(){
     $('.home').hide("slow");
     $('.services').show("slow");
     $('.howto').hide("slow");
-	window.scrollTo(0, 0);
+    $('.goodpractice').hide("slow");
+	   window.scrollTo(0, 0);
   });
 
   $('.howtobutton').click(function(){
@@ -49,6 +53,18 @@ function swagmodeon(){
     $('.home').hide("slow");
     $('.services').hide("slow");
     $('.howto').show("slow");
-	window.scrollTo(0, 0);
+    $('.goodpractice').hide("slow");
+	  window.scrollTo(0, 0);
   });
+
+  $('.practicebutton').click(function(){
+    $('.about').hide("slow");
+    $('.contact').hide("slow");
+    $('.home').hide("slow");
+    $('.services').hide("slow");
+    $('.howto').hide("slow");
+    $('.goodpractice').show("slow");
+	  window.scrollTo(0, 0);
+  });
+
 }

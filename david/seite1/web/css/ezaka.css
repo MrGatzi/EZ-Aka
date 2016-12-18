@@ -110,6 +110,7 @@ hr {
 footer {
     background: #fff;
     background: rgba(255,255,255,0.9);
+    margin-top: 2%;
 }
 
 footer p {
@@ -477,4 +478,13 @@ footer p {
 
 .angebot{
   margin-top: 1%;
+}
+
+.practiceheading{
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.practicename{
+  text-decoration: underline;
 }
