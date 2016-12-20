@@ -63,8 +63,8 @@ hr {
 }
 
 .brand-before,
-.brand-name {
-    text-transform: capitalize;
+.brand-name{
+    text-transform:none;
 }
 
 .brand-before {
@@ -485,6 +485,36 @@ footer p {
     margin-bottom: 2%;
 }
 
+.round-with-border{
+  border: 1px solid grey;
+}
+
 .practicename{
   text-decoration: underline;
+}
+
+.nav-pills > li > a{
+  -webkit-box-shadow:inset 0px 0px 0px 1px lightgrey;
+  -moz-box-shadow:inset 0px 0px 0px 1px lightgrey;
+  box-shadow:inset 0px 0px 0px 1px lightgrey;
+
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus {
+  color: white;
+  background-color: rgb(169,198,6);
+}
+
+.nav-pills > li.active > a:hover {
+  background-color: rgb(169,198,6);
+  color:white;
+}
+
+.nav-pills > li > a {
+  color: black;
+  /*margin: 0.25%;*/
+}
+
+.navbar-nav > li > a:hover{
+  cursor:pointer;
 }
