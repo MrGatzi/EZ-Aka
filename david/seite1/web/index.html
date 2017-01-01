@@ -35,7 +35,7 @@
     <div class="address-bar"></div>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default" role="navigation" data-spy="affix" data-offset-top="197">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -83,15 +83,54 @@
         <div class="row">
             <div class="box">
                 <div class="col-lg-12 text-center">
+
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <div id="carousel-example-generic" class="carousel slide">
+                          <!-- Indicators -->
+                          <ol class="carousel-indicators hidden-xs">
+                              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                          </ol>
+
+                          <!-- Wrapper for slides -->
+                          <div class="carousel-inner">
+                              <div class="item active">
+                                  <img class="img-responsive img-full" src="img/slider1.jpg" alt="">
+                              </div>
+                              <div class="item">
+                                  <img class="img-responsive img-full" src="img/slider2.jpg" alt="">
+                              </div>
+                              <div class="item">
+                                  <img class="img-responsive img-full" src="img/slider3.jpg" alt="">
+                              </div>
+                          </div>
+
+                          <!-- Controls -->
+                          <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                              <span class="icon-prev"></span>
+                          </a>
+                          <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                              <span class="icon-next"></span>
+                          </a>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/T7K0pZ9tGi4?list=UUa10nxShhzNrCE1o2ZOPztg"></iframe>
+                      </div>
+                    </div>
+                  </div>
+
+                    <!--
                     <div id="carousel-example-generic" class="carousel slide">
-                        <!-- Indicators -->
                         <ol class="carousel-indicators hidden-xs">
                             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                             <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                         </ol>
 
-                        <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active">
                                 <img class="img-responsive img-full" src="img/slider1.jpg" alt="">
@@ -104,14 +143,13 @@
                             </div>
                         </div>
 
-                        <!-- Controls -->
                         <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
                             <span class="icon-prev"></span>
                         </a>
                         <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
                             <span class="icon-next"></span>
                         </a>
-                    </div>
+                    </div>-->
                     <h2 class="brand-before">
                         <small>Herzlich Willkommen in der</small>
                     </h2>
@@ -201,7 +239,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title"><img class="img-responsive logo" src="img/logo_new.png" alt="logo"></img></h4>
+                <h4 class="modal-title"><img class="img-responsive" src="img/logo_new.png" alt="logo"></img></h4>
               </div>
               <div class="modal-body text-center">
                 <br>
@@ -535,12 +573,12 @@
                 <ul class="list-unstyled text-center">
                   <li>
                     <p>
-                      <a target="_blank" href="http://www.gerald-huether.de/">Gerald Hüther</a>
+                      <a target="_blank" href="http://www.gerald-huether.de/">Prof. Dr. Gerald Hüther</a>
                     </p>
                   </li>
                   <li>
                     <p>
-                      <a target="_blank" href="http://www.christian-felber.at/">Christian Felber</a>
+                      <a target="_blank" href="http://www.christian-felber.at/">Mag. Christian Felber</a>
                     </p>
                   </li>
                   <li>
@@ -550,22 +588,22 @@
                   </li>
                   <li>
                     <p>
-                      <a target="_blank" href="http://www.vermoegenspool.at/">Markus Distelberger</a>
+                      <a target="_blank" href="http://www.vermoegenspool.at/">Dr. Markus Distelberger</a>
                     </p>
                   </li>
                   <li>
                     <p>
-                      <a target="_blank" href="http://www.karllauterbach.de/person.html">Karl Lauterbach</a>
+                      <a target="_blank" href="http://www.karllauterbach.de/person.html">Dr. Karl Lauterbach</a>
                     </p>
                   </li>
                   <li>
                     <p>
-                      <a target="_blank" href="http://www.do-care.de/anne-katrin-matyssek/">Anne Katrin Matyssek</a>
+                      <a target="_blank" href="http://www.do-care.de/anne-katrin-matyssek/">Dr. Anne Katrin Matyssek</a>
                     </p>
                   </li>
                   <li>
                     <p>
-                      <a target="_blank" href="http://www.qualy-med.at/kompetenz-und-erfahrung/">Susanna Bultmann-Horn</a>
+                      <a target="_blank" href="http://www.qualy-med.at/kompetenz-und-erfahrung/">Dr. Susanna Bultmann-Horn</a>
                     </p>
                   </li>
                 </ul>
@@ -630,7 +668,7 @@
                       </div>
                       <div class="clearfix"></div>
 
-                      <!-- Panel Seminare -->
+                      <!-- Panel Seminare
                       <br>
                       <div class="panel panel-danger angebot">
                         <div class="panel-heading">
@@ -713,7 +751,7 @@
                       <div class="clearfix"></div>
 
                       <br>
-                      <!-- Panel lehrgange -->
+                      <!-- Panel lehrgange
                       <div class="panel panel-danger angebot">
                         <div class="panel-heading">
                           <h3 class="panel-title">Lehrgänge:</h3>
@@ -751,7 +789,7 @@
                         Wenn in Ihrem Unternehmen die „Lust statt Frust“ Tage immer weniger werden, Konfliktgespräche immer mehr, Krankenstandstage auch ohne Grippewelle in die Höhe schnellen und ein konstruktives Betriebsklima einfach nicht in die Gänge kommen will: dann ist Ihr Unternehmen vermutlich noch nicht „krank“. Es soll Menschen geben, die das sogar für „normal“ halten. Wir nicht. Da steckt mehr Potential drinnen - Ihr Unternehmen braucht VITALITÄT!
                       </strong>
 
-                      <div class="panel panel-danger angebot">
+                      <div class="panel panel-warning angebot">
                         <div class="panel-heading">
                           <h3 class="panel-title">Wir helfen Ihrem Team auf die Sprünge!</h3>
                         </div>
@@ -769,7 +807,7 @@
                       </div>
                       <div class="clearfix"></div>
 
-                      <div class="panel panel-danger angebot">
+                      <div class="panel panel-warning angebot">
                         <div class="panel-heading">
                           <h3 class="panel-title">Stress und Schmerz ade</h3>
                         </div>
@@ -781,7 +819,7 @@
                       </div>
                       <div class="clearfix"></div>
 
-                      <!-- Panel Seminare -->
+                      <!-- Panel Seminare
                       <br>
                       <div class="panel panel-warning angebot">
                         <div class="panel-heading">
@@ -887,7 +925,7 @@
 
                       <br>
 
-                      <!-- Panel lehrgange -->
+                      <!-- Panel lehrgange
                       <div class="panel panel-warning angebot">
                         <div class="panel-heading">
                           <h3 class="panel-title">Lehrgänge:</h3>
@@ -965,7 +1003,7 @@
                         Ein Richtungswechsel ist angesagt. Gemeinden werden lebendig mit der sozialen Architektur. Raus aus der Sackgasse, hin in Richtung VITALITÄT!
                       </strong>
 
-                      <div class="panel panel-danger angebot">
+                      <div class="panel panel-success angebot">
                         <div class="panel-heading">
                           <h3 class="panel-title">Wir helfen Ihrer Gemeinde auf die Sprünge!     </h3>
                         </div>
@@ -982,7 +1020,7 @@
                       <div class="clearfix"></div>
 
                       <br>
-                      <!--ausbildung-->
+                      <!--ausbildung
                       <div class="panel panel-warning angebot">
                         <div class="panel-heading">
                           <h3 class="panel-title">Ausbildung</h3>
@@ -991,7 +1029,7 @@
                       <div class="clearfix"></div>
                       <!-- ende ausbildung -->
 
-                      <div class="panel panel-warning angebot">
+                      <div class="panel panel-success angebot">
                         <div class="panel-heading">
                           <h3 class="panel-title">Public Health Nurse mit Schwerpunkt Gesundheitsberatung</h3>
                         </div>
@@ -1647,6 +1685,22 @@
 
     <!-- Swagmode JS -->
     <script src="js/swagmode.js"></script>
+
+    <!-- CookieInfo JS -->
+    <script type="text/javascript" src="js/cookieinfo.min.js" id="cookieinfo"
+      data-bg="#bebebe"
+      data-fg="#FFFFFF"
+      data-link="#1a1a1a"
+      data-divlinkbg="#FFFFFF"
+      data-cookie="CookieInfoScript"
+      data-text-align="left"
+      data-position="bottom"
+      data-message="Information gemäß EU-Richtlinie: Diese Seite verwendet Cookies. Wenn Sie die Seite nutzen, stimmen Sie der Verwendung von Cookies zu."
+      data-close-text="Verstanden">
+    </script>
+
+    >
+    </script>
 
     <!-- Script to Activate the Carousel and Swagmode -->
     <script>
