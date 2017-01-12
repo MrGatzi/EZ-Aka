@@ -86,7 +86,7 @@ function swagmodeon(){
     });
   });
 
-  /*
+/*
   $(".nav a").on("click", function(){
    $(".mynavbar").find(".active").removeClass("active");
    $(this).parent().addClass("active");
